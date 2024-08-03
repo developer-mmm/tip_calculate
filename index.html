@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script src="./app.js" defer></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="flex justify-center bg-teal-200 font-['Roboto Condensed']">
+    <div class="mt-36 h-[450px] bg-white rounded-2xl flex wrapper">
+      <div class="p-10 w-1/2">
+        <p class="text-lg nm_tip">Bill</p>
+        <input
+          id="amount"
+          type="number"
+          placeholder="$"
+          class="w-4/5 border-none bg-gray-200 p-2 my-2 rounded"
+          required
+        />
+
+        <p class="text-lg nm_tip">Select Tip %</p>
+        <div class="flex mb-5 flex-wrap">
+          <div
+            class="tip bg-teal-800 text-teal-200 min-w-[80px] m-1 text-center p-2 rounded cursor-pointer"
+          >
+            5%
+          </div>
+          <div
+            class="tip bg-teal-800 text-teal-200 min-w-[80px] m-1 text-center p-2 rounded cursor-pointer"
+          >
+            15%
+          </div>
+          <div
+            class="tip bg-teal-800 text-teal-200 min-w-[80px] m-1 text-center p-2 rounded cursor-pointer"
+          >
+            20%
+          </div>
+          <div
+            class="tip bg-teal-800 text-teal-200 min-w-[80px] m-1 text-center p-2 rounded cursor-pointer"
+          >
+            25%
+          </div>
+          <div
+            class="tip bg-teal-800 text-teal-200 min-w-[80px] m-1 text-center p-2 rounded cursor-pointer"
+          >
+            50%
+          </div>
+          <div
+            class="min-w-[80px] m-1 text-center text-2xl p-2 rounded cursor-pointer btn-custom"
+          >
+            Custom
+          </div>
+        </div>
+
+        <p class="text-lg nm_tip">Number of People</p>
+        <input
+          id="people"
+          type="number"
+          placeholder="👤"
+          class="w-4/5 border-none bg-gray-200 p-2 my-2 rounded"
+          required
+        />
+        <button
+          id="calculate"
+          class="h-10 w-full bg-teal-500 text-white text-lg rounded"
+        >
+          Calculate
+        </button>
+      </div>
+      <div class="bg-teal-800 text-teal-300 w-1/2 p-8 right-card">
+        <p class="mb-5 mt-4 text-white">
+          Tip Amount:<span class="pl-36 text-4xl tpamount" id="tipamount"
+            >0</span
+          >
+        </p>
+        <p class="-mt-4 person">/ person</p>
+        <p class="mb-5 mt-8 text-white">
+          Total: <span class="pl-48 text-4xl tpamount" id="totalamount">0</span>
+        </p>
+        <p class="-mt-4 person">/ person</p>
+        <button
+          id="reset"
+          class="h-10 w-full bg-teal-500 text-lg rounded reset"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
